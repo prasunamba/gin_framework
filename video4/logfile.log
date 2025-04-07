@@ -1,0 +1,14 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2025/04/06 21:36:56 formatted log GET,/log,main.getlog 4 
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+{"Method":"GET","Path":"/log","ClientIP":"127.0.0.1","StatusCode":200,"TimeStamp":"2025-04-06T21:36:59.489194782+05:30"}[GIN] 2025/04/06 - 21:36:59 | 200 |     137.721µs |       127.0.0.1 | GET      "/log"
+{"Method":"GET","Path":"/log","ClientIP":"127.0.0.1","StatusCode":200,"TimeStamp":"2025-04-06T21:37:04.678710263+05:30"}[GIN] 2025/04/06 - 21:37:04 | 200 |     179.866µs |       127.0.0.1 | GET      "/log"
+{"Method":"GET","Path":"/log","ClientIP":"127.0.0.1","StatusCode":200,"TimeStamp":"2025-04-06T21:37:05.666321412+05:30"}[GIN] 2025/04/06 - 21:37:05 | 200 |      620.07µs |       127.0.0.1 | GET      "/log"
