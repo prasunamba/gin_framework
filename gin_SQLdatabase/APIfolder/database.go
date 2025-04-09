@@ -21,8 +21,8 @@ var db *gorm.DB
 // creating  database
 func init() {
 	var err error
-	// mysql username:myuser,password:mypassword,prasuna-databasename
-	dsn := "myuser:mypassword@tcp(127.0.0.1:3306)/prasuna"
+	// mysql username:myuser,password:yourpassword,prasuna-databasename
+	dsn := "myuser:yourpassword@tcp(127.0.0.1:3306)/prasuna"
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil || db == nil {
 		log.Fatal("Failed to connect to MySQL:", err, db)

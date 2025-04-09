@@ -1,7 +1,7 @@
 
 -- to login to the mysql server from terminal
 prasuna@prasuna:~$ mysql -u myuser -p
-Enter password: 
+Enter password: yourpassword
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 14
 Server version: 8.0.41-0ubuntu0.22.04.1 (Ubuntu)
@@ -13,6 +13,10 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+NOTE: grant the user permissions to access the database 
+CMD: GRANT ALL PRIVILEGES ON prasuna.* TO 'myuser'@'localhost';
+FLUSH PRIVILEGES;
 
 
 mysql> SHOW DATABASES;
@@ -58,3 +62,5 @@ mysql> select * from users;
 mysql> exit
 Bye
 prasuna@prasuna:~$
+
+NOTE:this one use using ORM (gorm ) for mysql connection
