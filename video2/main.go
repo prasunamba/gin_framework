@@ -7,22 +7,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type student struct {
-	Id     string `json:"id"`
-	Name   string `json:"name"`
-	Course string `json:"course"`
-}
-
-var students = []student{
-	{Id: "one", Name: "prasuna", Course: "Mtech"},
-	{Id: "two", Name: "rahul", Course: "primary"},
-	{Id: "three", Name: "satwik", Course: "playschool"},
-}
-
-func Getstudents(c *gin.Context) {
-	c.JSON(http.StatusOK, students)
-}
-
 /*
 	This session covers:
 
@@ -38,7 +22,7 @@ func main() {
 	})
 	admin := router.Group("/admin", auth)
 	{
-		admin.GET("/students", Getstudents)
+		admin.GET("/Students", getStudents)
 	}
 	server := &http.Server{
 		Addr:         ":9091",
