@@ -2,6 +2,7 @@ package main
 
 import (
 	"example/video3/middleware"
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -48,5 +49,8 @@ func main() {
 		admin.GET("/hellogroup", GetGrouphandler)
 	}
 
-	router.Run()
+	// Run with TLS
+	if err := router.RunTLS(":8080", "cert.pem", "key.pem"); err != nil {
+		log.Fatal("Failed to run HTTPS server: ", err)
+	}
 }
